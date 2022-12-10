@@ -1,0 +1,13 @@
+.navButtons p:hover{
+    color: #e60e0e;
+    cursor: pointer;
+    border-bottom: #e60e0e solid 3px;
+}
+.navButtons a{
+    text-decoration: none;
+    color: inherit;             
+    font-family:'Century Gothic';
+    
+
+}
+
