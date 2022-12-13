@@ -76,9 +76,9 @@ const Skills = () => {
             <Box
               sx={{
                 boxShadow: '2px 2px 2px 1px rgba(0, 0, 0, 0.2)',
-                margin: '15px',
+                margin: '10px',
                 borderRadius: '10px',
-                width: '100px',
+                width: '90px',
               }}
             >
               <Stack direction='column' p={1} spacing={1} alignItems='center'>
