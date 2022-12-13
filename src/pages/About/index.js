@@ -1,13 +1,12 @@
 import { Grid, Typography, Box, Button } from '@mui/material';
 import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import './About.css';
 
 const About = () => {
   return (
-    <>
+    <div className='main-container'>
       <Grid container className='container'>
         <Grid item md={12}>
           <Typography variant='body2' sx={{ textDecoration: 'underline' }}>
@@ -28,20 +27,36 @@ const About = () => {
         </Grid>
         <Grid item xs={12} sx={{ marginTop: '80px' }}>
           <Box>
-            <FacebookIcon className='svg-icon' fontSize='large' color='error' />
-            <InstagramIcon
+            <GitHubIcon
               className='svg-icon'
               fontSize='large'
               color='error'
+              onClick={(event) =>
+                (window.location.href = 'https://github.com/tufail-Fayaz')
+              }
             />
-            <LinkedInIcon className='svg-icon' fontSize='large' color='error' />
-            <Button variant='outlined' color='error' className='button'>
+
+            <LinkedInIcon
+              className='svg-icon'
+              fontSize='large'
+              color='error'
+              onClick={(event) =>
+                (window.location.href =
+                  'https://www.linkedin.com/in/tufail-fayaz-18b031246/')
+              }
+            />
+            <Button
+              variant='outlined'
+              href='https://drive.google.com/file/d/17fd8dxVz18SzLOVwog3PSPasnvwyNTZM/view?usp=share_link'
+              color='error'
+              className='button'
+            >
               Resume
             </Button>
           </Box>
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 };
 

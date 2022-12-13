@@ -1,20 +1,17 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import Header from '../../components/Header';
 import profile from '../../components/assets/dev.png';
 import { Stack, Box } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import Button from '@mui/material/Button';
 import './Home.css';
-import Footer from '../../components/Footer';
 
 const Home = () => {
   return (
-    <div>
-      <Grid container>
+    <div className='main-container'>
+      <Grid container className='home-container'>
         <Grid
           item
           xs={12}
@@ -30,28 +27,30 @@ const Home = () => {
               I'm <span style={{ color: '#e60e0e' }}>Tufail</span> Fayaz
             </Typography>
             <Typography variant='h5' color='white' p={2}>
-              Freelance UI/UX designer
+              Frontend developer
             </Typography>
             <Box p={2}>
-              <FacebookIcon
+              <GitHubIcon
                 className='svg-icon'
                 fontSize='large'
                 color='error'
-              />
-              <InstagramIcon
-                className='svg-icon'
-                fontSize='large'
-                color='error'
+                onClick={(event) =>
+                  (window.location.href = 'https://github.com/tufail-Fayaz')
+                }
               />
               <LinkedInIcon
                 className='svg-icon'
                 fontSize='large'
+                onClick={(event) =>
+                  (window.location.href =
+                    'https://www.linkedin.com/in/tufail-fayaz-18b031246/')
+                }
                 color='error'
               />
               <Button
                 variant='outlined'
                 color='error'
-                href='../../../../../../Downloads/Tufail copy.pdf'
+                href='https://drive.google.com/file/d/17fd8dxVz18SzLOVwog3PSPasnvwyNTZM/view?usp=share_link'
                 className='button'
               >
                 Resume
@@ -69,7 +68,6 @@ const Home = () => {
           <img src={profile} alt='profile' width='80%' />
         </Grid>
       </Grid>
-      {/* <Footer /> */}
     </div>
   );
 };

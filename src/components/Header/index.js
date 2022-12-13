@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -17,9 +16,9 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Grid container p={4}>
+    <Grid container p={4} className='header-container'>
       <Grid item xs={6} md={2} p={1}>
-        <img src={logo} width='100px'></img>
+        <img src={logo} width='100px' alt='img'></img>
       </Grid>
       <Grid
         item
@@ -71,7 +70,7 @@ const Header = () => {
           <Box
             role='presentation'
             sx={{
-              backgroundColor: '#08084bf2',
+              backgroundColor: '#7b7dd0',
               color: 'white',
             }}
           >
