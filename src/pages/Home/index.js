@@ -11,29 +11,34 @@ import './Home.css';
 const Home = () => {
   return (
     <div className='main-container'>
-      <Grid container className='home-container'>
+      <Grid container className='home-container' mt={4}>
         <Grid
           item
           xs={12}
-          md={7}
+          md={8}
           sx={{
             display: 'flex',
             justifyContent: 'space-around',
             alignItems: 'center',
+            padding: '0px 30px',
           }}
+          className='home-container-title'
         >
           <Stack direction='column'>
-            <Typography variant='h2' p={2}>
+            <Typography variant='capttion' sx={{ letterSpacing: '4px' }}>
+              _HELLO
+            </Typography>
+            <Typography variant='h3'>
               I'm <span style={{ color: '#e60e0e' }}>Tufail</span> Fayaz
             </Typography>
-            <Typography variant='h5' color='white' p={2}>
-              Frontend developer
+            <Typography variant='body' mt={3}>
+              Frontend Developer located in Jammu & Kashmir, looking for work
+              around the globe
             </Typography>
-            <Box p={2}>
+            <Box mt={10}>
               <GitHubIcon
                 className='svg-icon'
                 fontSize='large'
-                color='error'
                 onClick={(event) =>
                   (window.location.href = 'https://github.com/tufail-Fayaz')
                 }
@@ -45,7 +50,6 @@ const Home = () => {
                   (window.location.href =
                     'https://www.linkedin.com/in/tufail-fayaz-18b031246/')
                 }
-                color='error'
               />
               <Button
                 variant='outlined'
@@ -61,7 +65,7 @@ const Home = () => {
         <Grid
           item
           xs={0}
-          md={5}
+          md={4}
           p={2}
           sx={{ display: { xs: 'none', md: 'block' } }}
         >

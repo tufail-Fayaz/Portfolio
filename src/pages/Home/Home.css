@@ -1,8 +1,38 @@
 .button{
     border-radius: 20px !important;
     margin-bottom: 25px !important;
+  transition: .5s;
+
 }
 
 .button:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: .5s;
+
 }
+.home-container-title h3{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 2px solid rgb(0, 0, 0); 
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typewriter 4s steps(17) 1s 1 normal both,
+             blinkTextCursor .75s steps(17) infinite normal;
+    
+}
+
+/* The typing effect */
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 51%;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+  
+ @media screen and (max-width: 400px) {
+        .home-container-title h3 {
+            font-size: 35px;
+        }
+        
+      }

@@ -1,19 +1,25 @@
 .header-container{
-    background-color: #7b7dd0;
-    opacity: 1;
+    /* background-color: #323236; */
+    /* opacity: 1;
     z-index: 2;
     position: sticky;
-    top: 0;
+    top: 0; */
 }
 
-.navButtons p:hover{
+.navButtons a:hover{
     color: #e60e0e;
+    letter-spacing: 5px;
+    transition: .7s;
     cursor: pointer;
     border-bottom: #e60e0e solid 3px;
 }
 .navButtons a{
+    padding: 4px 0;
+    transition: .7s;
+    
     text-decoration: none;
-    color: inherit;             
+    color: black;
+    font-weight: 800;             
     font-family:'Century Gothic';
     
 

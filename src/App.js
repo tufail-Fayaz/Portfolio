@@ -5,6 +5,7 @@ import Layout from './pages/Layout';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Skills from './pages/Skills';
+import React from 'react';
 
 function App() {
   return (

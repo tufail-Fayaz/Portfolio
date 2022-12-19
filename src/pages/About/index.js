@@ -14,7 +14,7 @@ const About = () => {
           </Typography>
         </Grid>
         <Grid item md={12} pt={5}>
-          <Typography variant='h5' sx={{ textAlign: 'justify' }}>
+          <Typography variant='h6' sx={{ textAlign: 'justify' }}>
             I'm a <span style={{ color: '#e60e0e' }}>web developer</span>{' '}
             passionate about programming and solving problems through code.I am
             graduated in 2018 at University of Kashmir. Fueled by high energy
@@ -30,7 +30,6 @@ const About = () => {
             <GitHubIcon
               className='svg-icon'
               fontSize='large'
-              color='error'
               onClick={(event) =>
                 (window.location.href = 'https://github.com/tufail-Fayaz')
               }
@@ -39,7 +38,6 @@ const About = () => {
             <LinkedInIcon
               className='svg-icon'
               fontSize='large'
-              color='error'
               onClick={(event) =>
                 (window.location.href =
                   'https://www.linkedin.com/in/tufail-fayaz-18b031246/')

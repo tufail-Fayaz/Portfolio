@@ -3,7 +3,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Drawer, Stack, Box } from '@mui/material';
 import logo from '../assets/portfolio.png';
-import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import List from '@mui/material/List';
@@ -17,81 +16,80 @@ const Header = () => {
 
   return (
     <Grid container p={4} className='header-container'>
-      <Grid item xs={6} md={2} p={1}>
-        <img src={logo} width='100px' alt='img'></img>
+      <Grid item xs={6} md={2}>
+        <img src={logo} width='150px' alt='img'></img>
       </Grid>
       <Grid
         item
         p={2}
         xs={0}
-        md={8}
-        sx={{ display: { xs: 'none', md: 'block' } }}
+        md={10}
+        sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}
       >
-        <Stack
-          direction='row'
-          spacing={4}
-          sx={{ color: 'white', fontWeight: '700' }}
-          className='navButtons'
-        >
+        <Stack direction='row' spacing={5} className='navButtons'>
           <Link to='/'>
-            <Typography variant='body2'>HOME</Typography>
+            <Typography variant='body'>HOME</Typography>
           </Link>
           <Link to='/about'>
-            <Typography variant='body2'>ABOUT</Typography>
+            <Typography variant='body'>ABOUT</Typography>
           </Link>
           <Link to='/contact'>
-            <Typography variant='body2'>CONTACT</Typography>
+            <Typography variant='body'>CONTACT</Typography>
           </Link>
           <Link to='/skills'>
-            <Typography variant='body2'>SKILLS</Typography>
+            <Typography variant='body'>SKILLS</Typography>
           </Link>
         </Stack>
       </Grid>
+
       <Grid
         item
         xs={6}
-        md={2}
-        textAlign='right'
-        sx={{ display: { xs: 'none', md: 'block' } }}
-      >
-        <Button variant='outlined' className='button' color='error'>
-          Let's Talk
-        </Button>
-      </Grid>
-      <Grid
-        item
-        xs={6}
-        md={2}
         alignItems='center'
         sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}
       >
         <MenuIcon fontSize='large' onClick={() => setOpen(true)} />
         <Drawer anchor='top' open={open} onClose={() => setOpen(false)}>
-          <Box
-            role='presentation'
-            sx={{
-              backgroundColor: '#7b7dd0',
-              color: 'white',
-            }}
-          >
+          <Box role='presentation' sx={{ color: 'black' }}>
             <List>
-              <ListItem disablePadding>
+              <ListItem
+                disablePadding
+                onClick={() => {
+                  setOpen(false);
+                  console.log('first');
+                }}
+              >
                 <ListItemButton component={Link} to='/'>
                   <ListItemText primary='HOME' />
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton component={Link} to='/about'>
-                  <ListItemText primary='ABOUT' />
+                <ListItemButton
+                  component={Link}
+                  to='/about'
+                  onClick={() => setOpen(false)}
+                >
+                  <ListItemText
+                    primary='ABOUT'
+                    onClick={() => setOpen(false)}
+                  />
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton component={Link} to='/contact'>
+                <ListItemButton
+                  component={Link}
+                  to='/contact'
+                  onClick={() => setOpen(false)}
+                >
                   <ListItemText primary='CONTACT' />
                 </ListItemButton>
               </ListItem>
               <ListItem disablePadding>
-                <ListItemButton component={Link} to='/skills'>
+                <ListItemButton
+                  component={Link}
+                  to='/skills'
+                  onClick={() => setOpen(false)}
+                >
                   <ListItemText primary='SKILLS' />
                 </ListItemButton>
               </ListItem>
